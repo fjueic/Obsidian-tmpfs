@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mount_point="~/Obsidian/Notes/"
-notes_dir="~/Videos/Notes/"
+mount_point="$HOME/Obsidian/Notes/"
+notes_dir="$HOME/Videos/Notes/"
 
 # if Notes is not empty, exit
 if [ "$(ls -A $mount_point)" ]; then
@@ -18,7 +18,7 @@ fi
 pkexec mount -t tmpfs -o size=50M tmpfs "$mount_point"
 
 # Copy the notes to the tmpfs mount mount_point
-cp -r "$notes_dir" "$mount_point"
+cp -r "$notes_dir"* "$mount_point"
  
-python ~/.config/hypr/script/obsidian/save_state.py $mount_point"
+python ~/.config/hypr/script/obsidian/save_state.py "$mount_point"
 
