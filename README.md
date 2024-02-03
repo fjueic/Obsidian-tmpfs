@@ -11,7 +11,7 @@ While using tmpfs for Obsidian might be considered overkill, it can be a fun exp
 - Create a `tmpfs` mount point within Obsidian's vault directory and configure Obsidian to use it as its vault.
 - Copy the files from the original vault to the tmpfs mount point.
 - When you're done with Obsidian, copy the files back to the original vault.
-- Optionally, use `cronie` to automate this process at specific times.
+- Optionally, use `cronie` to automate this process at specific times. This can also be done using `Shell Command Extension` mentioned at the bottom.
 - Note: It's recommended not to store attachments in tmpfs since they are unlikely to be edited. You can either create or delete them.
 
 ### How to Install?
